@@ -476,6 +476,16 @@ async def log_error(client, error_message):
     except Exception as e:
         print(f"Failed to log error: {e}")
 
+ef get_greeting():
+    tz = pytz.timezone('Asia/Kolkata')
+    hour = datetime.now(tz).time().hour
+    if 5 <= hour < 12:
+        sts = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌞"
+    elif 12 <= hour < 18:
+        sts = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ 🌗"
+    else:
+        sts = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
+    return sts
 
 def get_time(seconds):
     periods = [(' ᴅᴀʏs', 86400), (' ʜᴏᴜʀ', 3600), (' ᴍɪɴᴜᴛᴇ', 60), (' sᴇᴄᴏɴᴅ', 1)]
