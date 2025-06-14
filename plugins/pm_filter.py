@@ -1244,14 +1244,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👹 ​S​​🇹​​🇷​​🇪​​🇦​​🇲​ / ​D​​🇴​​🇼​​🇳​​🇱​​🇴​​🇦​​🇩​​ 👹", url=silent_stream),  # we download Link
-                                                    InlineKeyboardButton('⚔️ ​S​​🇭​​🇦​​🇷​​🇪​ ​L🇮​​🇳​​🇰​ ⚔️', url=f"https://telegram.me/share/url?{silent_stream})]])  # web stream Link
+                                                    InlineKeyboardButton('⚔️ ​S​​🇭​​🇦​​🇷​​🇪​ ​L🇮​​🇳​​🇰​ ⚔️', url=f'https://telegram.me/share/url?url=silent_stream)]])  # web stream Link
             )
             SilentXBotz = await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👹 ​S​​🇹​​🇷​​🇪​​🇦​​🇲​ / ​D​​🇴​​🇼​​🇳​​🇱​​🇴​​🇦​​🇩​​ 👹", url=silent_stream),  # we download Link
-                                                    InlineKeyboardButton('⚔️ ​S​​🇭​​🇦​​🇷​​🇪​ ​L🇮​​🇳​​🇰​ ⚔️', url=f"https://telegram.me/share/url?{silent_stream})]])
+                                                    InlineKeyboardButton('⚔️ ​S​​🇭​​🇦​​🇷​​🇪​ ​L🇮​​🇳​​🇰​ ⚔️', url=f'https://telegram.me/share/url?url=silent_stream)]])
             )              
             await asyncio.sleep(DELETE_TIME) 
             await SilentXBotz.delete()
