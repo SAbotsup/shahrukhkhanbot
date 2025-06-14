@@ -1432,11 +1432,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=script.EARN_INFO.format(temp.B_LINK),
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
-            ) 
-        except Exception as e:
-            print(e)
-
-elif query.data == "telegraph":
+        ),
+        reply_markup=reply_markup
+    )
+   
+    elif query.data == "telegraph":
         buttons = [[
             InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')
         ]]
