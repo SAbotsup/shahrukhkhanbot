@@ -1403,7 +1403,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('• ꜰɪʟᴛᴇʀꜱ •', callback_data='filters'),
                 InlineKeyboardButton('• ꜰɪʟᴇ ꜱᴛᴏʀᴇ •', callback_data='store_file')
             ],[
-                InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='setting_btn')        
+                InlineKeyboardButton('• ɪᴍᴀɢᴇ ᴛᴏ ʟɪɴᴋ •', callback_data='telegraph'),
+		InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='setting_btn')        
             ],[
                 InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
             ]]
@@ -1434,6 +1435,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ) 
         except Exception as e:
             print(e)
+
+elif query.data == "telegraph":
+        buttons = [[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)  
+        await query.message.edit_text(
+            text=script.TELE_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
 
     elif query.data == "filters":
         try:
