@@ -155,7 +155,7 @@ async def next_page(bot, query):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"{silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
+                        text=f"🎄 {silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
                     ),
                 ]
                 for file in files
@@ -348,7 +348,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"{silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
+                        text=f"🎄 {silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
                     ),
                 ]
                 for file in files
@@ -499,7 +499,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"{silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
+                        text=f"🎄 {silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
                     ),
                 ]
                 for file in files
@@ -649,7 +649,7 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"{silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
+                        text=f"🎄 {silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
                     ),
                 ]
                 for file in files
@@ -1243,15 +1243,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=silent_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=silent_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👹 ​S​​🇹​​🇷​​🇪​​🇦​​🇲​ / ​D​​🇴​​🇼​​🇳​​🇱​​🇴​​🇦​​🇩​​ 👹", url=silent_stream),  # we download Link
+                                                    InlineKeyboardButton('⚔️ ​S​​🇭​​🇦​​🇷​​🇪​ ​L🇮​​🇳​​🇰​ ⚔️', url=f"https://telegram.me/share/url?{silent_stream})]])  # web stream Link
             )
             SilentXBotz = await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=silent_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=silent_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👹 ​S​​🇹​​🇷​​🇪​​🇦​​🇲​ / ​D​​🇴​​🇼​​🇳​​🇱​​🇴​​🇦​​🇩​​ 👹", url=silent_stream),  # we download Link
+                                                    InlineKeyboardButton('⚔️ ​S​​🇭​​🇦​​🇷​​🇪​ ​L🇮​​🇳​​🇰​ ⚔️', url=f"https://telegram.me/share/url?{silent_stream})]])
             )              
             await asyncio.sleep(DELETE_TIME) 
             await SilentXBotz.delete()
@@ -1534,8 +1534,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     
     elif query.data == "bot":
         buttons = [[
-            InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
-            InlineKeyboardButton ('• sᴏᴜʀᴄᴇ •', callback_data='source'),
+            InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer')
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
@@ -1701,7 +1700,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
+                    text=f"🎄 {silent_size(file.file_size)}| {extract_tag(file.file_name)} {clean_filename(file.file_name)}", callback_data=f'file#{file.file_id}'
                 ),
             ]
             for file in files
